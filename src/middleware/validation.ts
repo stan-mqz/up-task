@@ -8,7 +8,7 @@ export const handleInputErrors = (req : Request, res: Response, next: NextFuncti
 
 
     //Si existen errores se mandan como array en la response
-    if (!errors.isEmpty) {
+    if (!errors.isEmpty()) {
         return res.status(400).json({errors: errors.array()})
     }
 
