@@ -3,6 +3,7 @@ import { body, param } from "express-validator";
 //Usamos metodos estaticos para evitar tener tantas exportaciones
 import { ProjectController } from "../controllers/ProjectController";
 import { handleInputErrors } from "../middleware/validation";
+import {TaskController} from '../controllers/TaskController'
 
 const router = Router();
 
@@ -64,5 +65,12 @@ router.delete(
 
   ProjectController.deleteProject,
 );
+
+
+//Rutas para las tareas. Se hace asi por que dependen de un proyecto
+
+router.post('/:projectId/tasks', TaskController.createTask
+
+)
 
 export default router;
