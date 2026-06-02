@@ -16,6 +16,7 @@ export type TaskStatus = typeof taskStatus[keyof typeof taskStatus]
 
 //Primero creamos la interfaz
 export interface ITask extends Document {
+  id: Types.ObjectId;
   name: string;
   description: string;
 

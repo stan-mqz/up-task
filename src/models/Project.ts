@@ -3,6 +3,7 @@ import { ITask } from "./Task";
 
 //Creamos un type que heradara todas las funciones y tipos de document (Esto es para ts)
 export interface IProject extends Document  {
+  id: Types.ObjectId
   projectName: string;
   clientName: string;
   description: string;
